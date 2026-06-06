@@ -1,24 +1,27 @@
 ﻿# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Virtual environment
+# Virtual environments
 venv/
 .env
 
-# Database
-*.db
+# IDE
+.vscode/
+.idea/
 
-# Model files
+# Data
 data/models/
 data/cache/
 data/runs/
 
-# Python caches everywhere
-**/__pycache__/
+# Database
+*.db
 
-# OS
+# Logs
+*.log
+
+# OS files
 .DS_Store
 Thumbs.db
