@@ -1,0 +1,26 @@
+# Core
+requests>=2.31.0
+numpy>=1.24.0
+python-dotenv>=1.0.0
+
+# arXiv & PDF Parsing
+arxiv>=2.1.0
+pdfplumber>=0.10.0
+PyPDF2>=3.0.0
+PyMuPDF>=1.23.0
+opendataloader-pdf>=0.1.0  # Optional (requires JDK 17)
+
+# NLP & Embeddings
+sentence-transformers>=2.2.0  # Auto-installs torch + transformers
+tiktoken>=0.5.0
+spacy>=3.7.0
+yake>=0.4.0
+hdbscan>=0.8.0
+scikit-learn>=1.3.0
+
+# LLM & Vector Search
+groq>=0.4.0
+faiss-cpu>=1.7.4  
+# Utilities
+dataclasses
+typing-extensions

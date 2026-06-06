@@ -1,0 +1,95 @@
+{
+  "software_testing": {
+    "canonical_terms": [
+      "flaky test detection", "regression test prioritization", "mutation testing",
+      "test oracle generation", "coverage optimization", "CI/CD reliability",
+      "automated defect prediction", "test case generation", "fault localization",
+      "test suite minimization", "autonomous QA", "explainable testing"
+    ],
+    "aliases": {
+      "flaky tests": ["intermittent failures", "non-deterministic tests", "CI instability", "flapping tests"],
+      "regression testing": ["regression suite", "change-impact testing", "re-testing"],
+      "mutation testing": ["mutant killing", "mutation score", "mutation operators"],
+      "defect prediction": ["bug prediction", "fault prediction", "defect localization"],
+      "test oracle": ["test verdict", "expected output", "correctness criterion"],
+      "CI/CD": ["continuous integration", "continuous delivery", "build pipeline", "DevOps pipeline"]
+    },
+    "negative_terms": ["education", "pedagogy", "curriculum", "student", "teaching", "course", "classroom", "learning outcomes"],
+    "benchmarks": ["Defects4J", "SIR", "MutPy", "EvoSuite benchmark", "SF110"],
+    "conferences": ["ICSE", "FSE", "ASE", "ISSTA", "ICST"],
+    "emerging_themes": ["LLM-based test generation", "autonomous testing agents", "self-healing tests", "AI-assisted QA"]
+  },
+  "machine_learning": {
+    "canonical_terms": [
+      "model robustness", "adversarial examples", "out-of-distribution detection",
+      "transfer learning", "few-shot learning", "continual learning",
+      "model interpretability", "fairness", "calibration", "neural architecture search"
+    ],
+    "aliases": {
+      "robustness": ["resilience", "stability", "perturbation resistance"],
+      "interpretability": ["explainability", "transparency", "black-box explanation", "XAI"],
+      "fairness": ["bias mitigation", "algorithmic fairness", "demographic parity"],
+      "few-shot": ["low-resource", "data-efficient", "meta-learning"]
+    },
+    "negative_terms": ["survey", "tutorial", "introduction", "overview", "textbook"],
+    "benchmarks": ["ImageNet", "GLUE", "SuperGLUE", "CIFAR", "MNIST", "BenchLM"],
+    "conferences": ["NeurIPS", "ICML", "ICLR", "CVPR", "ACL"],
+    "emerging_themes": ["foundation models", "RLHF", "multimodal learning", "efficient inference"]
+  },
+  "natural_language_processing": {
+    "canonical_terms": [
+      "named entity recognition", "relation extraction", "coreference resolution",
+      "semantic parsing", "machine translation", "summarization",
+      "question answering", "dialogue systems", "sentiment analysis", "information extraction"
+    ],
+    "aliases": {
+      "NER": ["entity recognition", "named entities", "entity tagging"],
+      "summarization": ["text condensation", "abstractive summarization", "extractive summarization"],
+      "QA": ["question answering", "reading comprehension", "open-domain QA"]
+    },
+    "negative_terms": ["education", "language learning", "pedagogy", "ESL", "second language"],
+    "benchmarks": ["SQuAD", "CoNLL", "OntoNotes", "MultiNLI", "WMT"],
+    "conferences": ["ACL", "EMNLP", "NAACL", "COLING", "EACL"],
+    "emerging_themes": ["LLM alignment", "retrieval-augmented generation", "chain-of-thought", "instruction tuning"]
+  },
+  "cybersecurity": {
+    "canonical_terms": [
+      "vulnerability detection", "malware analysis", "intrusion detection",
+      "access control", "authentication", "cryptographic protocols",
+      "privacy-preserving computation", "threat modeling", "zero-day exploits", "fuzzing"
+    ],
+    "aliases": {
+      "vulnerability": ["CVE", "security flaw", "software weakness", "CWE"],
+      "intrusion detection": ["IDS", "anomaly detection", "threat detection"],
+      "fuzzing": ["fuzz testing", "mutation fuzzing", "coverage-guided fuzzing"]
+    },
+    "negative_terms": ["education", "awareness training", "user study", "cybersecurity curriculum"],
+    "benchmarks": ["CVE database", "NVD", "DARPA CGC", "LAVA"],
+    "conferences": ["IEEE S&P", "CCS", "USENIX Security", "NDSS"],
+    "emerging_themes": ["LLM-assisted vulnerability detection", "AI-driven threat intelligence", "differential privacy"]
+  },
+  "software_engineering": {
+    "canonical_terms": [
+      "code review automation", "bug localization", "program synthesis",
+      "automated program repair", "code clone detection", "technical debt",
+      "microservices", "DevOps", "requirements engineering", "software maintenance"
+    ],
+    "aliases": {
+      "APR": ["automated repair", "patch generation", "bug fixing"],
+      "code review": ["pull request review", "peer review", "code inspection"],
+      "technical debt": ["code smell", "maintainability", "refactoring"]
+    },
+    "negative_terms": ["education", "student projects", "CS courses", "undergraduate", "pedagogy"],
+    "benchmarks": ["Defects4J", "BugsInPy", "CodeSearchNet", "BigCode"],
+    "conferences": ["ICSE", "FSE", "ASE", "MSR", "ICSME"],
+    "emerging_themes": ["LLM-assisted development", "AI pair programming", "self-healing systems"]
+  },
+  "default": {
+    "canonical_terms": [],
+    "aliases": {},
+    "negative_terms": ["education", "pedagogy", "curriculum", "student", "teaching"],
+    "benchmarks": [],
+    "conferences": [],
+    "emerging_themes": []
+  }
+}

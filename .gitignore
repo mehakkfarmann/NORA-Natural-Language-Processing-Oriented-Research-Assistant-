@@ -1,0 +1,24 @@
+﻿# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# Database
+*.db
+
+# Model files
+data/models/
+data/cache/
+data/runs/
+
+# Python caches everywhere
+**/__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
