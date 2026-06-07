@@ -1,54 +1,72 @@
-NORA – NLP Oriented Research Assistant
+# NORA — NLP-Oriented Research Assistant
 
-NORA is research support platform designed to assist students and researchers in identifying research gaps, understanding existing literature, and generating methodology recommendations from academic papers.
+> An end-to-end AI pipeline that reads scientific papers, finds research gaps, and generates grounded research ideas.
 
-### Overview
+![Python](https://img.shields.io/badge/Python-83%25-blue?logo=python) ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-green?logo=fastapi) ![LLM](https://img.shields.io/badge/LLM-Groq%20API-orange)
 
-Conducting a literature review is a time-consuming process that requires analyzing numerous research papers to identify unexplored areas and potential research opportunities. NORA automates this process by leveraging Artificial Intelligence (AI), Natural Language Processing (NLP), and Large Language Models (LLMs) to analyze academic literature and provide evidence-based insights.
+---
 
-The system enables users to search research topics using keywords or upload research papers in PDF format for detailed analysis.
+## What It Does
 
-### Features
-Research paper retrieval using topic keywords
-PDF upload and analysis
-Automatic extraction of:
-Research problems
-Objectives
-Methodologies
-Datasets
-Results
-Limitations
-Future work
-Research gap identification
-Methodology recommendation generation
-Dataset and tool suggestions
-Interactive and user-friendly web interface
+Literature review is slow, manual, and easy to get wrong. NORA automates it:
 
-### System Workflow
-User enters research keywords or uploads a PDF.
-NORA retrieves and processes relevant research papers.
-The system extracts important research information.
-AI analyzes the collected literature.
-Research gaps are identified based on existing studies.
-Methodology recommendations are generated.
-Results are displayed through an interactive dashboard.
+- **Ingests** papers via keyword search (Semantic Scholar, OpenAlex, ArXiv) or direct PDF upload
+- **Extracts** structured information — problems, objectives, methods, datasets, results, limitations, future work
+- **Identifies** research gaps using faithful quote-based evidence (no hallucination — every gap traces to exact author sentences)
+- **Synthesizes** consensus gaps across multiple papers
+- **Generates** concrete methodology recommendations grounded in the literature
 
-### Technology Stack
-Frontend: React.js
-
-Backend:FastAPI , Python
-
-Database: SQLite 
-
-AI & NLP: Large Language Models (LLMs), Natural Language Processing (NLP)
-
-Academic Data Sources: OpenAlex, Semantic Scholar , Arxiv
-
-User Uploaded PDFs
-
-### Project Objectives
-Reduce the effort required for literature review.
-Help researchers identify meaningful research gaps.
-Provide methodology recommendations for future studies.
-Support undergraduate, postgraduate, and academic researchers.
-Improve research planning and decision-making.
+---
+## Tech Stack
+ 
+| Layer | Technology |
+|---|---|
+| Frontend | React.js |
+| Backend API | FastAPI (Python) |
+| Embeddings | SentenceTransformers (BGE) |
+| LLM | Groq API |
+| PDF Parsing | pdfminer |
+| Database | SQLite |
+| Paper Sources | Semantic Scholar · OpenAlex · ArXiv |
+ 
+---
+   
+## Architecture
+ 
+```
+Input: Topic Keywords  ──OR──  PDF Upload
+              ↓                        ↓
+         Layer 0                  PDF Parser
+     (Paper Fetcher)             (pdfminer)
+              ↓                        ↓
+         Layer 1               ────────┘
+    (Query Processor)
+              ↓
+         Layer 2
+      (Synthesizer — cross-paper gap consensus)
+              ↓
+         Layer 3
+    (Gap Extractor — per-paper, LLM + rule-based)
+              ↓
+         Layer 4
+   (Idea Generator — grounded research proposals)
+```
+ ## Setup
+ 
+```bash
+git clone https://github.com/mehakkfarmann/NORA-Natural-Language-Processing-Oriented-Research-Assistant-
+cd NORA-Natural-Language-Processing-Oriented-Research-Assistant-
+pip install -r requirements.txt
+python run.py
+```
+ 
+---
+ 
+## Project Status
+ 
+Core pipeline functional. Actively refining gap extraction precision and idea generation grounding.
+ 
+---
+ 
+*Final Year Project — Computer Science, University of Agriculture Faisalabad*
+ 
